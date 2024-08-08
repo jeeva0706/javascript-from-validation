@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration from</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .container {
+            width: 30%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            border-right: 3px skyblue solid;
+            border-left: 3px black solid;
+            border-top: 3px yellow solid;
+            border-bottom: 3px red solid;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .input,
+        .form-control,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .float-end {
+            float: right;
+        }
+
+        .submit1 {
+            display: block;
+            width: 50%;
+            padding: 10px;
+            background-color: skyblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            margin-left: 100px;
+            margin-top: 20px;
+        }
+
+        .submit1:hover {
+            background-color: pink;
+        }
+
+        .trans {
+            margin: 0 8px 0 0;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        .header,
+        .form-section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="./Pink Modern Dance Competition Poster (1).653fd007854806.52136831.png" class="img-fluid"
+                alt="baner">
+            <h2>Dance Registration</h2>
+            <p>Fill the registration form below keenly to enter the dancing competition.</p>
+        </div>
+        <div class="form-section">
+            <label for="data">Name:</label><br>
+            <input type="text" id="data" class="input"><br>
+            <p id="main" style="color: red;"></p>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="text" id="phone" class="input" placeholder="123-234-575">
+            <p id="phoneaddres" style="color: red;"></p>
+
+            <label for="email">E-mail:</label><br>
+            <input type="text" id="email" class="input" placeholder="jacdcnd@gamail.com">
+            <p id="emailaddres" style="color: red;"></p>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" class="input">
+            <p id="passwordaddres" style="color: red;"></p>
+        </div>
+
+        <div class="form-section">
+            <h3>Gender</h3>
+            <div class="male_female">
+                <input type="radio" id="male" name="gender" value="male" class="trans">
+                <label for="male" class="trans">Male</label>
+                <input type="radio" id="female" name="gender" value="female" class="trans">
+                <label for="female" class="trans">Female</label>
+                <p id="gender" style="color: red;"></p>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <label for="address">Address:</label>
+            <input type="text" id="address" class="form-control">
+            <p id="address12" style="color: red;"></p>
+        </div>
+
+        <div class="form-section">
+            <label for="state">Select your state:</label>
+            <select name="state" id="state">
+                <option value="select your state" id="state">Select your state</option>
+                <option value="kerala">Kerala</option>
+                <option value="karnataka">Karnataka</option>
+                <option value="mumbai">Mumbai</option>
+            </select>
+            <p id="state1" style="color: red;"></p>
+        </div>
+
+        <div class="form-section">
+            <label for="district">Select your district:</label>
+            <select name="district" id="district">
+                <option value="select your district" id="districrt">Select your district</option>
+                <option value="erode">Erode</option>
+                <option value="salem">Salem</option>
+                <option value="tirupur">Tirupur</option>
+            </select>
+            <p id="district1" style="color: red;"></p>
+        </div>
+
+        <div class="form-section">
+            <label for="pincode">Pin Code:</label>
+            <input type="text" id="pincodevalue" class="form-control">
+            <p id="pincode1" style="color: red;"></p>
+        </div>
+
+        <div class="form-section">
+            <h4>Type Of Dance</h4>
+            <div>
+                <input type="checkbox" id="bachata" name="dance" value="Bachata">
+                <label for="bachata"> Bachata</label>
+            </div>
+            <div>
+                <input type="checkbox" id="hiphop" name="dance" value="Hip Hop">
+                <label for="hiphop"> Hip Hop</label>
+            </div>
+            <div>
+                <input type="checkbox" id="club" name="dance" value="Club">
+                <label for="club"> Club</label>
+            </div>
+            <div>
+                <input type="checkbox" id="tango" name="dance" value="Tango">
+                <label for="tango"> Tango</label>
+            </div>
+            <div>
+                <input type="checkbox" id="salsa" name="dance" value="Salsa">
+                <label for="salsa"> Salsa</label>
+            </div>
+            <p id="dance" style="color: red;"></p>
+        </div>
+
+        <div class="form-section">
+            <label for="start_date">Start Day & Time:</label>
+            <input type="date" id="start_date" name="start_date">
+            <input type="time" id="start_time" name="start_time" class="float-end">
+            <p id="date1" style="color: red;"></p>
+        </div>
+
+        <div class="form-section">
+            <label for="comments">Comments:</label>
+            <textarea id="comments" class="form-control" style="height: 150px;"></textarea>
+            <p id="comment1" style="color: red;"></p>
+        </div>
+        <hr>
+
+        <div class="buttontype">
+            <button onclick="myfunction()" class="submit1">Submit</button>
+        </div>
+    </div>
+
+    <script>
+
+        function myfunction() {
+
+            let name = document.getElementById("data").value;
+            let pattern = /^[a-zA-Z ]{2,30}$/;
+            if (name == "") {
+                document.getElementById("main").innerHTML = "plesae enter the name";
+            }
+            else if (!pattern.test(name)) {
+                document.getElementById("main").innerHTML = "please enter the valid name";
+            }
+            else {
+                document.getElementById("main").innerHTML = "";
+            }
+
+
+            let email = document.getElementById("email").value;
+            let emailHelp = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+            if (email == "") {
+                document.getElementById("emailaddres").innerHTML = "plesae enter the email";
+            }
+            else if (!emailHelp.test(email)) {
+                document.getElementById("emailaddres").innerHTML = "plesae enter the valid E-mail";
+            }
+            else {
+                document.getElementById("emailaddres").innerHTML = "";
+            }
+
+            let phonenumber = document.getElementById("phone").value;
+            let phone = /^(\d{3})[- ]?(\d{3})[- ]?(\d{4})$/;
+            if (phonenumber == "") {
+                document.getElementById("phoneaddres").innerHTML = "plesae enter the phone number";
+            }
+            else if (!phone.test(phonenumber)) {
+                document.getElementById("phoneaddres").innerHTML = "plesae enter the valid number";
+            }
+            else {
+                document.getElementById("phoneaddres").innerHTML = "";
+            }
+
+            let password = document.getElementById("password").value;
+            let passwordentery = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+            if (password == "") {
+                document.getElementById("passwordaddres").innerHTML = "plesae enter the pass word";
+            }
+            else if (!passwordentery.test(password)) {
+                document.getElementById("passwordaddres").innerHTML = "plesae enter the valid password";
+            }
+            else {
+                document.getElementById("passwordaddres").innerHTML = "";
+            }
+
+            let address = document.getElementById("address").value;
+            if (address == "") {
+                document.getElementById("address12").innerHTML = "plesae enter the address";
+            }
+            else {
+                document.getElementById("address12").innerHTML = "";
+            }
+
+            if (male.checked) {
+                document.getElementById("gender").innerHTML = "";
+            }
+            else if (female.checked) {
+                document.getElementById("gender").innerHTML = "";
+            }
+            else {
+                document.getElementById("gender").innerHTML = "choose one data";
+            }
+
+            if (bachata.checked) {
+                document.getElementById("dance").innerHTML = "";
+            }
+            else if (hiphop.checked) {
+                document.getElementById("dance").innerHTML = "";
+            }
+            else if (club.checked) {
+                document.getElementById("dance").innerHTML = "";
+            }
+            else if (tango.checked) {
+                document.getElementById("dance").innerHTML = "";
+            }
+            else if (salsa.checked) {
+                document.getElementById("dance").innerHTML = "";
+            }
+            else {
+                document.getElementById("dance").innerHTML = "choose one data"
+            }
+
+            let pincode = document.getElementById("pincodevalue").value;
+            let pincodeentry = /^(\d{6})$/;
+            if (pincode == "") {
+                document.getElementById("pincode1").innerHTML = "plesae enter the pincode";
+            }
+            else if (!pincodeentry.test(pincode)) {
+                document.getElementById("pincode1").innerHTML = "plesae enter the valid pincode";
+            }
+            else {
+                document.getElementById("pincode1").innerHTML = "";
+            }
+
+            let comment = document.getElementById("comments").value;
+            if (comment == "") {
+                document.getElementById("comment1").innerHTML = "enter your comment plesae";
+            }
+            else {
+                document.getElementById("comment1").innerHTML = "";
+            }
+
+            let state = document.getElementById("state").value;
+            if (state == "select your state") {
+                document.getElementById("state1").innerHTML = "choose your state";
+            }
+            else {
+                document.getElementById("state1").innerHTML = "";
+            }
+
+            let district = document.getElementById("district").value;
+            if (district == "select your district") {
+                document.getElementById("district1").innerHTML = "choose your district";
+            }
+            else {
+                document.getElementById("district1").innerHTML = "";
+            }
+
+            let date = document.getElementById("start_date").value;
+            let selectedDate = new Date(date);
+            let currentDate = new Date();
+            if (date == "") {
+                document.getElementById("date1").innerHTML = "enter the date";
+            }
+            else if (selectedDate < currentDate){
+                document.getElementById("data1").innerHTML = "enter the corect";
+            }
+            else {
+                document.getElementById("data1").innerHTML = "";
+            }
+        }  
+    </script>
+
+</body>
+
+</html>
